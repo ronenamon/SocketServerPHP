@@ -6,6 +6,8 @@
 */
 error_reporting(E_ERROR | E_PARSE);
 
+require_once("./inc/Server.php");
+require_once("./inc/AppService.php");
 
 define("IP_ADDRESS","127.0.0.1");
 define("PORT",1111);
@@ -15,3 +17,5 @@ define("CX","42cf3a15145052826");
 define("KEY","AIzaSyBU2sKQ9trv2SLf1wSvIlbj599lK_WzB9I");
 define("BASE_API_URL","https://www.googleapis.com/customsearch/v1");
 
+$socket_server  = new AppService();
+$socket_server->start();
